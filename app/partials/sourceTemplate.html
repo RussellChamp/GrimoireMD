@@ -1,0 +1,16 @@
+<md-dialog>
+    <md-button class="md-primary" ng-click="sc.closeDialog()">Done</md-button>
+    <md-content>
+        <md-subheader class="md-primary">{{sc.source.name}}</md-subheader>
+        <md-list layout="column">
+            <md-item ng-repeat="(name, data) in sc.source.data">
+                <md-checkbox ng-model="data.enabled" aria-label={{name}}>
+                    Include {{name}}
+                    <md-tooltip ng-if="name == 'Spells'" md-direction="top">
+                        Used with scrolls and wands
+                    </md-tooltip>
+                </md-checkbox>
+            </md-item>
+        </md-list>
+    </md-content>
+</md-dialog>

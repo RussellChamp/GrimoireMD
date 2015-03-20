@@ -1,0 +1,10 @@
+{
+    "name": "Advanced Player's Guide",
+    "shortName": "APG",
+    "types": [
+        {"name": "Rings", "source": "./data/APG/Rings.json"},
+        {"name": "Rods", "source": "./data/APG/Rods.json"},
+        {"name": "Spells", "source": "./data/APG/Spells.json"},
+        {"name": "Wondrous Items", "source": "./data/APG/Wondrous Items.json"}
+    ]
+}

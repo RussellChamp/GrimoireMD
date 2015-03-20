@@ -1,0 +1,15 @@
+[
+  {"description": "Defeat/slay diametrically opposed alignment", "egoMod": 2, "weight": 20 },
+  {"description": "Defeat/slay arcane spellcasters (including spellcasting monsters and those that use spell-like abilities)",
+          "egoMod": 2, "weight": 10 },
+  {"description": "Defeat/slay divine spellcasters (including divine entities and servitors)",
+          "egoMod": 2, "weight": 10 },
+  {"description": "Defeat/slay non-spellcasters", "egoMod": 2, "weight": 10 },
+  {"description": "Defeat/slay all GET_BANE", "egoMod": 2, "weight": 5 },
+  {"description": "Defeat/slay all GET_HUMANOID_OR_OUTSIDER_TYPE", "egoMod": 2, "weight": 5 },
+  {"description": "Defend all GET_HUMANOID_OR_OUTSIDER_TYPE","egoMod": 2, "weight": 10 },
+  {"description": "Defeat/slay the servants of GET_DEITY", "egoMod": 2, "weight": 10 },
+  {"description": "Defend the servants of GET_DEITY", "egoMod": 2, "weight": 10 },
+  {"description": "Defeat/slay all (other than the item and the wielder)", "egoMod": 2, "weight": 5 },
+  {"description": "Make something up! (GM discression)", "egoMod": 2, "weight": 5 }
+]

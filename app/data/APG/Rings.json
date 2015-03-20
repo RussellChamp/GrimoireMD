@@ -1,0 +1,20 @@
+[
+    { "name" : "Dungeon ring, prisoner's", "cost": 250, "url": "#dungeon-ring", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Arcane signets", "cost": 1000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Maniacal Devices", "cost": 5000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (1 stone)", "cost": 5000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Forcefangs", "cost": 8000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Revelation, lesser", "cost": 10000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (2 stones)", "cost": 10000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (3 stones)", "cost": 15000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Retribution", "cost": 15000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Dungeon ring, jailer's", "cost": 16000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Revelation, greater", "cost": 16000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (4 stones)", "cost": 20000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Revelation, superior", "cost": 24000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (5 stones)", "cost": 25000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (6 stones)", "cost": 30000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (7 stones)", "cost": 35000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (8 stones)", "cost": 40000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} },
+    { "name" : "Delayed doom (9 stones)", "cost": 45000, "url": "", "weight": {"minor": 0, "medium": 0, "major": 0} }
+]

@@ -1,0 +1,19 @@
+{
+    "sources": [
+        "./data/CRB.json",
+        "./data/APG.json",
+        "./data/UM.json",
+        "./data/UC.json"
+    ],
+    "other": [
+        "./data/Banes.json",
+        "./data/Deities.json",
+        "./data/Humanoids.json",
+        "./data/Outsiders.json",
+        "./data/ItemSkills.json",
+        "./data/Languages.json",
+        "./data/ItemPowers.json",
+        "./data/ItemPurposes.json",
+        "./data/ItemDedicatedPowers.json"
+    ]
+}

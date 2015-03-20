@@ -1,0 +1,22 @@
+[
+    { "name": "Appraise", "type": "intelligence" },
+    { "name": "Knowledge (arcana)", "type": "intelligence" },
+    { "name": "Knowledge (dungeoneering)", "type": "intelligence" },
+    { "name": "Knowledge (engineering)", "type": "intelligence" },
+    { "name": "Knowledge (geography)", "type": "intelligence" },
+    { "name": "Knowledge (history)", "type": "intelligence" },
+    { "name": "Knowledge (local)", "type": "intelligence" },
+    { "name": "Knowledge (nature)", "type": "intelligence" }, 
+    { "name": "Knowledge (nobility)", "type": "intelligence" },
+    { "name": "Knowledge (planes)", "type": "intelligence" },
+    { "name": "Knowledge (religion)", "type": "intelligence" },
+    { "name": "Linguistics", "type": "intelligence" },
+    { "name": "Spellcraft", "type": "intelligence" }, 
+    { "name": "Bluff", "type": "charisma" },
+    { "name": "Diplomacy", "type": "charisma" },
+    { "name": "Intimidate", "type": "charisma" },
+    { "name": "Perform", "type": "charisma" },
+    { "name": "Perception", "type": "wisdom" },
+    { "name": "Sense Motive", "type": "wisdom" },
+    { "name": "Survival", "type": "wisdom" }
+]

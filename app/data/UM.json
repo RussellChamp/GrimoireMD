@@ -1,0 +1,7 @@
+{
+    "name": "Ultimate Magic",
+    "shortName": "UM",
+    "types": [
+        {"name": "Spells", "source": "./data/UM/Spells.json"}
+    ]
+}

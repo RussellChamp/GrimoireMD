@@ -1,0 +1,7 @@
+{
+    "name": "Ultimate Combat",
+    "shortName": "UC",
+    "types": [
+        {"name": "Spells", "source": "./data/UC/Spells.json"}
+    ]
+}

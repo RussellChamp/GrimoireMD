@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>GrimoireJS</title>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+<script type="application/javascript" src="chance.js"></script>
+
+<script type="application/javascript" src="grimoire-core.js"></script>
+
+<!--
+<script type="application/javascript" src="grimoire.js"></script>
+<script type="application/javascript" src="intelligence.js"></script>
+<script type="application/javascript" src="weapons.js"></script>
+<script type="application/javascript" src="wondrousItems.js"></script>
+<script type="application/javascript" src="rings.js"></script>
+<script type="application/javascript" src="rods.js"></script>
+<script type="application/javascript" src="spells.js"></script>
+<script type="application/javascript" src="scrolls.js"></script>
+<script type="application/javascript" src="deities.js"></script>
+<script type="application/javascript" src="potions.js"></script>
+<script type="application/javascript" src="wands.js"></script>
+<script type="application/javascript" src="staves.js"></script>
+<script type="application/javascript" src="energy.js"></script>
+<script type="application/javascript" src="armors.js"></script>
+<script type="application/javascript" src="shields.js"></script>
+-->
+</head>
+<body>
+<h2>GrimoireJS</h2>
+<strong>========</strong>
+<div><strong>GrimoireJS: Magic item generator for the Pathfinder tabletop RPG</strong></div>
+<div>Written by Russell Champoux</div>
+<br/>
+<div>This project contains a series of function under the 'Grimoire' object.</div>
+<div>Jquery and lodash (or underscore) are required by this project</div>
+<br/>
+<div>Grimoire currently only rolls for items based on the Pathfinder Core Rulebook.</div>
+<div>I hope to add roll tables for the Pathfinder Advanced Player's Guide soon</div>
+<br/>
+<div>While the primary purpose of this project is to be used as a library accessed by other projects, you can manually generate items by following these steps</div>
+ <ol>
+ <li>Open grimoire.html in a web browser</li>
+ <li>Hit F12 to open the developer console</li>
+ <li>All commands are within the following objects:</li>
+ </ol>
+ <ul>
+ <li>Grimoire</li>
+ <li>Armors</li>
+ <li>Weapons</li>
+ <li>Deities</li>
+ <li>Intelligence</li>
+ <li>Potions</li>
+ <li>Rings</li>
+ <li>Rods</li>
+ <li>Scrolls</li>
+ <li>Shields</li>
+ <li>Staves</li>
+ <li>Wands</li>
+ <li>Weapons</li>
+ <li>WondrousItems</li>
+ </ul>
+
+<h3>Tips</h3>
+<ul style="list-style-type:square">
+<li>All get*() function take a "type" argument that can be either 'minor', 'medium', or 'major'</li>
+<li>Try running Grimoire.getItems(2,2,2) to generate several minor, medium, and major items</li>
+<li>NOTE that all non-unique weapons are returned as "minor/medium/major melee/range weapon". It is up to the GM to determine what specific weapon this resolves to. It is recommend to check what proficiencies your players have. :)
+<li>Many get*() functions also have an optional paramater "source" that specifies which source material to pull from. Currently, only "CRB" and "APG" are supported.</li>
+</ul>
+<br/>
+<div>One of the funnest things in this library (imho) is the item intelligence module.<br/>
+Create an intelligence by running Intelligence.getItemIntelligence().print()</div>
+<br/>
+<div>Send questions, feedback, or bug reports/fixes to RussellChamp [at] gmail [dot] com</div>
+<br/>
+<h2>To do</h2>
+<ul>
+<li>Make interactive webpage</li>
+ <li>Already input spells for wizard/sorceror, cleric, and druid. Check for other arcane and divine spells from other classes</li>
+</ul>
+</body>
+</html>

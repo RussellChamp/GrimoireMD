@@ -1,0 +1,13 @@
+[
+    { "name": "Aquatic", "weight": 6},
+    { "name": "Dwarf", "weight": 13},
+    { "name": "Elf", "weight": 13},
+    { "name": "Giant", "weight": 7},
+    { "name": "Goblinoid", "weight": 6},
+    { "name": "Gnoll", "weight": 7},
+    { "name": "Gnome", "weight": 7},
+    { "name": "Halfling", "weight": 8},
+    { "name": "Human", "weight": 12},
+    { "name": "Orc", "weight": 13},
+    { "name": "Reptilian", "weight": 8}
+]

@@ -1,0 +1,8 @@
+Pathfinder magic item automatic roller
+To do:
+
+* I'm getting a problem where the random number generator is reliably getting the SAME item from a weighted list and I'm not sure why.
+ = This is occuring for getHumanoid, getOutsider, getDeity, and several other lowest level methods
+   when called from higher order functions like getIntelligence or getWeapon
+ = This isn't happening anymore but i'm not sure why. I think that chance was getting re-seeded somewhere
+* I'm occasionally getting a bug where selectSource will claim that it can't find a source for major Scrolls

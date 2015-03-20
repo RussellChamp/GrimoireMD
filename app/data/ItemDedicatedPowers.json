@@ -1,0 +1,16 @@
+[
+    { "description": "Item can detect any special purpose foes within 60 feet", 
+        "costMod": 10000, "egoMod": 1, "weight": 20 },
+    { "description": "Item can cast GET_SPELL_LEVEL_4 at will",
+        "costMod": 56000, "egoMod": 2, "weight": 15 },
+    {"description": "Wielder gets +2 luck bonus on attacks, saves, and checks",
+        "costMod": 80000, "egoMod": 2, "weight": 15 },
+    {"description": "Item can cast GET_SPELL_LEVEL_5 at will",
+     "costMod": 90000, "egoMod": 2, "weight": 15 },
+    {"description": "Item can cast GET_SPELL_LEVEL_6 at will",
+        "costMod": 132000, "egoMod": 2, "weight": 25 },
+    {"description": "Item can cast GET_SPELL_LEVEL_7 at will",
+        "costMod": 182000, "egoMod": 2, "weight": 15 },
+    {"description": "Item can cast true resurrection on weilder, once per month",
+        "costMod": 200000, "egoMod": 2, "weight": 5 }
+]

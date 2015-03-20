@@ -1,0 +1,11 @@
+[
+    { "name": "Air", "weight": 11},
+    { "name": "Earth", "weight": 11},
+    { "name": "Fire", "weight": 11},
+    { "name": "Water", "weight": 11},
+    { "name": "Chaotic", "weight": 11},
+    { "name": "Evil", "weight": 11},
+    { "name": "Good", "weight": 11},
+    { "name": "Lawful", "weight": 11},
+    { "name": "Native", "weight": 12}
+]

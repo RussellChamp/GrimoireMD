@@ -1,0 +1,14 @@
+[
+    ["Bleed","Touch of Fatigue","Resistance","Stabilize","Guidance"],
+    ["Cure Light Wounds","Chill Touch","Doom","Endure Elements","Enlarge Person","Feather Fall","Hide from Animals",
+            "Hide from Undead","Inflict Light Wounds","Jump","Mage Armor","Magic Fangs","Magic Weapon","Pass without Trace","Protection from Evil",
+            "Reduce Person","Remove Fear","Sanctuary","Shield of Faith"],
+    ["Aid","Barkskin","Bear's Endurance","Blindness/Deafness","Blur","Bull's Strength","Cat's Grace","Cure Moderate Wounds",
+            "Darkvision","Delay Poison","Eagle's Splendor","Fox's Cunning","Heroism","Hold Person","Inflict Moderate Wounds","Invisibility",
+            "Owl's Wisdom","Protection From Arrows","Rage","Remove Paralysis","Resist Energy","Restoration, Lesser","Tongues","Touch of Idiocy",
+            "Undetectable Alignment"],
+    ["Bestow Curse","Confusion","Contagion","Crushing Despair","Cure Serious Wounds","Deep Slumber","Dispel Magic","Displacement",
+            "Gaseous Form","Good Hope","Haste","Inflict Serious Wounds","Keen Edge","Magic Circle against Evil","Magic Fang, Greater","Magic Weapon, Greater",
+            "Magic Vestment","Neutralize Poison","Nondetection","Poison","Protection from Energy","Remove Blindness/Deafness","Remove Curse","Remove Disease",
+            "Slow","Water Breathing","Water Walking"]
+]

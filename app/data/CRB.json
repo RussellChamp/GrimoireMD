@@ -1,0 +1,17 @@
+{
+    "_todo": "Add the following items Armor and Shields, Potions, Rods, Scrolls, Staves, Wands, Weapons",
+    "name": "Core Rule Book",
+    "shortName": "CRB",
+    "types": [
+        {"name": "Potions", "source": "./data/CRB/Potions.json"},
+        {"name": "Rings", "source": "./data/CRB/Rings.json"},
+        {"name": "Rods",  "source": "./data/CRB/Rods.json"},
+        {"name": "Spells", "source": "./data/CRB/Spells.json"},
+        {"name": "Scrolls"},
+        {"name": "Staves", "source": "./data/CRB/Staves.json"},
+        {"name": "Wands"},
+        {"name": "Weapons", "source": "./data/CRB/Weapons.json"},
+        {"name": "Armor and Shields", "source": "./data/CRB/Armor and Shields.json"},
+        {"name": "Wondrous Items",  "source": "./data/CRB/Wondrous Items.json"}
+        ]
+}

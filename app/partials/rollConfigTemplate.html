@@ -1,0 +1,58 @@
+<md-dialog class="rollerDialog">
+
+<md-subheader class="md-primary">Number of items</md-subheader>
+<md-list layout="row" layout-align="center center">
+    <md-item>
+    <md-input-container>
+        <label>Minor</label>
+        <input type="number" ng-model="config.options.numMinor" min=0 max=100 required>
+    </md-input-container>
+    </md-item>
+    <md-item>
+    <md-input-container>
+        <label>Medium</label>
+        <input type="number" ng-model="config.options.numMedium" min=0 max=100 required>
+    </md-input-container>
+    </md-item>
+    <md-item>
+    <md-input-container>
+        <label>Major</label>
+        <input type="number" ng-model="config.options.numMajor" min=0 max=100 required>
+    </md-input-container>
+    </md-item>
+</md-list>
+
+<md-divider></md-divider>
+
+<md-button class="md-primary" ng-click="config.closeDialog('roll')">Roll</md-button>
+<md-button class="md-primary" ng-click="config.closeDialog('close')">Close</md-button>
+
+<md-divider></md-divider>
+
+<md-content layout="column">
+<md-subheader class="md-primary">Item Types</md-subheader>
+    <md-list>
+        <md-item ng-repeat="(name, status) in config.options.displayTypes" layout="row">
+            <md-checkbox ng-model="config.options.displayTypes[name]" flex="35"
+                ng-disabled="status == 'disabled'" aria-label={{name}}>
+                {{name}}
+                <md-tooltip ng-if="status == 'disabled'">
+                    Disabled in all sources
+                </md-tooltip>
+            </md-checkbox>
+            <md-button class="md-raised" flex="20" 
+                ng-disabled="status == 'disabled'" ng-click="gr.getItem('minor', name)">
+                Minor
+            </md-button>
+            <md-button class="md-raised" flex="20" 
+                ng-disabled="status == 'disabled'" ng-click="gr.getItem('medium', name)">
+                Medium
+            </md-button>
+            <md-button class="md-raised" flex="20" 
+                ng-disabled="status == 'disabled'" ng-click="gr.getItem('major', name)">
+                Major
+            </md-button>
+        </md-item>
+    </md-list>
+</md-content>    
+</md-dialog>

@@ -1,0 +1,15 @@
+[
+    { "name": "Aberations", "weight": 5},
+    { "name": "Animals", "weight": 4},
+    { "name": "Constructs", "weight": 7},
+    { "name": "Dragons", "weight": 6},
+    { "name": "Fey", "weight": 5},
+    { "name": "Humanoids (GET_HUMANOID_TYPE)", "weight": 30},
+    { "name": "Magical Beasts", "weight": 8},
+    { "name": "Monstrous Humanoids", "weight": 5},
+    { "name": "Oozes", "weight": 22},
+    { "name": "Outsiders (GET_OUTSIDER_TYPE)", "weight": 16},
+    { "name": "Plants", "weight": 2},
+    { "name": "Undead", "weight": 8},
+    { "name": "Vermin", "weight": 2}
+]
