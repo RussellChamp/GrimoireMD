@@ -374,7 +374,7 @@ var Grimoire = function(config) { // jshint ignore:line
         }
 
         if(!options.disableClue && chance.d100() <= (options.clueChance || 20)) {
-            item.name += ' with a clue to it\'s purpose!';
+            item.description = 'with a clue to it\'s purpose! ' + (item.description ? item.description : '');
         }
         item.quality = quality;
         return item;
@@ -714,6 +714,7 @@ var Grimoire = function(config) { // jshint ignore:line
         var chance = (self.chance ? self.chance : options.seed ? new Chance(options.seed) : new Chance());
         var weapon = {
             name: '',
+            description: '',
             type: '',
             bonus: 0,
             baseCost: 0,
@@ -838,6 +839,7 @@ var Grimoire = function(config) { // jshint ignore:line
             ret += this.bonus > 0 ? ('+' + this.bonus + ' ') : '';
             ret += this.specials.length > 0 ? _.map(this.specials, function(s) { return s.name;}).join(', ') + ' ' : '';
             ret += this.name ? this.name : (this.type + ' weapon');
+            ret += this.description ? (' ' + this.description) : '';
             ret += ';';
             ret += this.intelligence.print ? 'Intelligence: [' + this.intelligence.print() + '];' : '';
             ret += 'Cost: ' + this.cost + 'gp';
@@ -877,6 +879,7 @@ var Grimoire = function(config) { // jshint ignore:line
 
         var item = {
             name: '',
+            description: '',
             type: '',
             bonus: 0,
             baseCost: 0,
@@ -1033,7 +1036,7 @@ var Grimoire = function(config) { // jshint ignore:line
         }
 
 
-        var totalBonus = item.bonus + _.sum(_.map(item.specials, function(s) { return s.bonsu; }));
+        var totalBonus = item.bonus + _.sum(_.map(item.specials, function(s) { return s.bonus; }));
         item.cost = item.baseCost + 1000 * Math.pow(totalBonus, 2);
 
         item.print = function() {
@@ -1041,6 +1044,7 @@ var Grimoire = function(config) { // jshint ignore:line
             ret += this.bonus > 0 ? ('+' + this.bonus + ' ') : '';
             ret += this.specials.length > 0 ? _.map(this.specials, function(s) { return s.name;}).join(', ') + ' ' : '';
             ret += this.name ? this.name : this.type;
+            ret += this.description ? (' ' + this.description) : '';
             ret += ';';
             ret += 'Cost: ' + this.cost + 'gp';
             return ret;
