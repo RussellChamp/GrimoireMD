@@ -492,10 +492,15 @@ var Grimoire = function(config) { // jshint ignore:line
             // spell of each spell level he knows every few levels.
             var slvl = [2,4,5,5,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10];
             //console.log("At Caster Level " + String(casterLevel) + " you get:");
-            for(var spellLevel = 1; spellLevel <= 9; spellLevel++) {
+            for(var spellLevel = 0; spellLevel <= 9; spellLevel++) {
                 var numSpells = 0;
+                var levelSpells = [];
                 if(casterLevel >= spellLevel * 2 - 1) { //minimum requirement
                     numSpells = slvl[casterLevel - (spellLevel*2-1)];
+                    if(spellLevel === 0) {
+                        numSpells = 10;
+                    }
+
                     if(spellLevel === 1) {
                         numSpells += 4; //since you start with 3 + Int first level spells
                     }
@@ -503,15 +508,22 @@ var Grimoire = function(config) { // jshint ignore:line
                     for(var i = 0; i < numSpells; i++) {
                         var newSpell = {};
                         do {
-                            newSpell = Spells.getLevelSpell(spellLevel, 'arcane');
-                        } while(_.contains(spells, newSpell)); //duplicate
-                        spells.push(newSpell);
+                            newSpell = self.getSpell(spellLevel, {type: 'Arcane'});
+                        } while(_.chain(levelSpells)
+                                .map(function(s) { return s.name; })
+                                .contains(newSpell.name)
+                                .value()
+                                ); //duplicate
+                        levelSpells.push(newSpell);
+
                     }
+                    spells.push(levelSpells);
                 }
                 else {
                     break; //no point checking the higher levels
                 }
             }
+            //contains[[SL0 spells], [SL1 spells], ...]
             return spells;
         }
     };
