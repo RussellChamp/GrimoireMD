@@ -129,7 +129,7 @@ var Grimoire = function(config) { // jshint ignore:line
     //                  will not use sources that are marked as disabled
     //options.types manually specify what types you want to get
     this.getItems = function(quality, count, options) {
-        options = options ? options : {};
+        options = options ? _.clone(options) : {};
         var sources = options.sources ? options.sources : self.SOURCES;
         var types = options.types ? options.types : _.values(TYPES);
 
@@ -286,7 +286,7 @@ var Grimoire = function(config) { // jshint ignore:line
                 });
         }
         if(_.sum(sourceWeights) <= 0) {
-            console.error('Unable to find valid ' + quality + ' ' + type + ' within sources!', sources);
+            console.error('Unable to find valid ', quality, type, options.itemType, options.uniqueType, ' within sources!', sources);
             return;
         }
         //chance.weighted will DESTRUCTIVELY modify paramaters that have a weight of zero
@@ -388,6 +388,7 @@ var Grimoire = function(config) { // jshint ignore:line
 
         var maxRoll = options.maxRoll || _.sum(_.map(itemData, function(item) { 
                                                 return item.weight[quality]; }));
+        //console.log('itemData', itemData, 'quality', quality, 'maxRoll', maxRoll);
         var roll = chance.integer({min: 1, max: maxRoll});
         var item = {};
 
@@ -471,6 +472,48 @@ var Grimoire = function(config) { // jshint ignore:line
             'source': spell.source,
             'itemType': TYPES.SCROLLS
         };
+    };
+
+    this.getSpellbook = function(casterLevel, options) {
+        options = options ? options : {};
+        var chance = (self.chance ? self.chance : options.seed ? new Chance(options.seed) : new Chance());
+        if(casterLevel) {
+            casterLevel = _.min([casterLevel, 20]);
+            var spells = [];
+            //there's really no precident for this.
+            //I'm just going to assume Wizard only.
+            //Assume ALL cantrips
+            //Wizards know 3 + Int level 1 spells at level 1
+            //Ever level, a wizard adds two new spells to his book
+            //The minimum CL for a spell is (spell * 2 - 1)
+            //We will just take a shot and say the following
+            //One they qualify for that spell level, a wizard will get two at that level
+            // and two more on the next level. Past that, a wizard will gain an additional
+            // spell of each spell level he knows every few levels.
+            var slvl = [2,4,5,5,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10];
+            //console.log("At Caster Level " + String(casterLevel) + " you get:");
+            for(var spellLevel = 1; spellLevel <= 9; spellLevel++) {
+                var numSpells = 0;
+                if(casterLevel >= spellLevel * 2 - 1) { //minimum requirement
+                    numSpells = slvl[casterLevel - (spellLevel*2-1)];
+                    if(spellLevel === 1) {
+                        numSpells += 4; //since you start with 3 + Int first level spells
+                    }
+                    //console.log(String(numSpells) + " level " + String(spellLevel) + " spells");
+                    for(var i = 0; i < numSpells; i++) {
+                        var newSpell = {};
+                        do {
+                            newSpell = Spells.getLevelSpell(spellLevel, 'arcane');
+                        } while(_.contains(spells, newSpell)); //duplicate
+                        spells.push(newSpell);
+                    }
+                }
+                else {
+                    break; //no point checking the higher levels
+                }
+            }
+            return spells;
+        }
     };
 
     this.getPotion = function(quality, options) {
@@ -831,7 +874,7 @@ var Grimoire = function(config) { // jshint ignore:line
             weapon.glowing = true;
         }
         
-        var totalBonus = weapon.bonus + _.sum(_.map(weapon.specials, function(s) { return s.bonsu; }));
+        var totalBonus = weapon.bonus + _.sum(_.map(weapon.specials, function(s) { return s.bonus; }));
         weapon.cost = weapon.baseCost + 2000 * Math.pow(totalBonus, 2) + (weapon.intelligence.cost || 0);
         weapon.print = function() {
             var ret = 'Name: ';
@@ -842,7 +885,7 @@ var Grimoire = function(config) { // jshint ignore:line
             ret += this.description ? (' ' + this.description) : '';
             ret += ';';
             ret += this.intelligence.print ? 'Intelligence: [' + this.intelligence.print() + '];' : '';
-            ret += 'Cost: ' + this.cost + 'gp';
+            //ret += 'Cost: ' + this.cost + 'gp';
             return ret;
         };
 
@@ -1037,7 +1080,8 @@ var Grimoire = function(config) { // jshint ignore:line
 
 
         var totalBonus = item.bonus + _.sum(_.map(item.specials, function(s) { return s.bonus; }));
-        item.cost = item.baseCost + 1000 * Math.pow(totalBonus, 2);
+        var specialsCost = _.sum(_.map(item.specials, function(s) { return s.cost; }));
+        item.cost = item.baseCost + 1000 * Math.pow(totalBonus, 2) + specialsCost;
 
         item.print = function() {
             var ret = 'Name: ';
@@ -1045,8 +1089,8 @@ var Grimoire = function(config) { // jshint ignore:line
             ret += this.specials.length > 0 ? _.map(this.specials, function(s) { return s.name;}).join(', ') + ' ' : '';
             ret += this.name ? this.name : this.type;
             ret += this.description ? (' ' + this.description) : '';
-            ret += ';';
-            ret += 'Cost: ' + this.cost + 'gp';
+            //ret += ';';
+            //ret += 'Cost: ' + this.cost + 'gp';
             return ret;
         };
 
@@ -1257,8 +1301,9 @@ var Grimoire = function(config) { // jshint ignore:line
         //extra languages are based on intelligence and ranks in Linguistics
         bonusLanguages += Math.floor((i.stats.intelligence-10)/2);
         //pick is safe even if we have more bonusLanguages than exist
-        i.languages.concat(chance.pick(self.Languages.data, bonusLanguages));
-
+        if(bonusLanguages > 0) {
+            i.languages = i.languages.concat(chance.pick(self.Languages.data, bonusLanguages));
+        }
 
         //***ITEM PURPOSE***
         //there was NO roll chart for determining if an item has a purpose so I made this up
@@ -1323,14 +1368,14 @@ var Grimoire = function(config) { // jshint ignore:line
             ret += 'Stats: Ego ' + this.ego + ', Int ' + this.stats.intelligence + ', ' +
                     'Wis ' + this.stats.wisdom + ', ' +
                     'Cha ' + this.stats.charisma + ';';
-            ret += 'Communication: ' + this.communication + ' (' + this.languages.join(',' ) + ');';
+            ret += 'Communication: ' + this.communication + ' (' + this.languages.join(', ' ) + ');';
             ret += 'Senses: ' + this.senses + ';';
             ret += 'Powers: ' + _.map(this.powers, function(p) { return p.description; }).join(', ') + ';';
             if(this.purpose) {
                 ret += 'Purpose: ' + this.purpose + ';';
                 ret += 'Dedicated Powers: ' + _.map(this.dedicatedPowers, function(p) {return p.description; }).join(', ') + ';';
             }            
-            ret += 'Cost: ' + i.cost + 'gp';
+            //ret += 'Cost: ' + i.cost + 'gp';
 
             return ret;
 
