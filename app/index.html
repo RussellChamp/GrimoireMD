@@ -146,8 +146,9 @@
 
         <md-content flex id="content" layout="column">
           <md-button class="md-primary big" ng-click="gr.openConfig()">Generate Items</md-button>
-          <md-list class="md-whiteframe-z2">
+          <md-list>
             <md-item ng-repeat="itemList in gr.itemLists">
+            <div class="md-whiteframe-z2">
               <h2 layout-align="center">~~{{itemList.date|date:'HH:mm:ss'}}~~</h2>
               <ul>
                 <li ng-repeat="item in itemList.items">
@@ -167,6 +168,7 @@
                   </ul>
                 </li>
               </ul>
+            </div>
             </md-item>
           </md-list>
           
