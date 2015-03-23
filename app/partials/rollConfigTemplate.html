@@ -1,6 +1,6 @@
 <md-dialog class="rollerDialog">
 
-<md-subheader class="md-primary">Number of items</md-subheader>
+<h2 class="md-primary">Number of items</h2>
 <md-list layout="row" layout-align="center center">
     <md-item>
     <md-input-container>
@@ -30,17 +30,17 @@
 <md-divider></md-divider>
 
 <md-content layout="column">
-<md-subheader class="md-primary">Item Types</md-subheader>
+<h2 class="md-primary">Item Types</h2>
     <md-list>
-        <md-item ng-repeat="(name, status) in config.options.displayTypes" layout="row">
-            <md-checkbox ng-model="config.options.displayTypes[name]" flex="35"
+        <md-item ng-repeat="(name, status) in config.options.displayTypes" layout="row" flex="33">
+            <md-checkbox ng-model="config.options.displayTypes[name]"
                 ng-disabled="status == 'disabled'" aria-label={{name}}>
                 {{name}}
                 <md-tooltip ng-if="status == 'disabled'">
                     Disabled in all sources
                 </md-tooltip>
             </md-checkbox>
-            <md-button class="md-raised" flex="20" 
+            <!-- <md-button class="md-raised" flex="20" 
                 ng-disabled="status == 'disabled'" ng-click="gr.getItem('minor', name)">
                 Minor
             </md-button>
@@ -51,7 +51,7 @@
             <md-button class="md-raised" flex="20" 
                 ng-disabled="status == 'disabled'" ng-click="gr.getItem('major', name)">
                 Major
-            </md-button>
+            </md-button> -->
         </md-item>
     </md-list>
 </md-content>    

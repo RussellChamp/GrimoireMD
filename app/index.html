@@ -95,6 +95,7 @@
               <md-select placeholder="Type" ng-model="spellType">
                 <md-option value="Arcane">Arcane</md-option>
                 <md-option value="Divine">Divine</md-option>
+                <md-option value="Either">Either</md-option>
               </md-select>
               <md-input-container>
                 <label>Spell Level</label>
@@ -150,8 +151,20 @@
               <h2 layout-align="center">~~{{itemList.date|date:'HH:mm:ss'}}~~</h2>
               <ul>
                 <li ng-repeat="item in itemList.items">
-                  <span ng-if="item.print">{{item.print()}}</span>
+                  <span ng-if="item.print">{{item.print()}} {{item.cost|number}}gp</span>
                   <span ng-if="!item.print">{{item.name}} {{item.description}} {{item.cost|number}}gp</span>
+                </li>
+                <li ng-repeat="spell in itemList.spells">
+                  <span>{{spell.name}} ({{spell.type}} level {{spell.level}}, {{spell.source}})</span>
+                </li>
+                <li ng-repeat="other in itemList.other">
+                  <span>{{other.text}}</span>
+                </li>
+                <li ng-repeat="levelSpells in itemList.spellbook track by $index">
+                  Level {{$index}} spells ({{levelSpells.length}})
+                  <ul ng-repeat="spell in itemList.spellbook[$index]">
+                    {{spell.name}} ({{spell.source}})
+                  </ul>
                 </li>
               </ul>
             </md-item>

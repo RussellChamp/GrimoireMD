@@ -41,10 +41,6 @@
       intelligenceChance: 1,
     };
 
-    self.getSpell = function(type, spellLevel) {
-      console.log('type', type, 'level', spellLevel);
-    };
-
     self.doneLoading = false;
     self.selected = null;
 
@@ -133,6 +129,76 @@
       console.log('items', itemList.items);
 
       self.itemLists.unshift(itemList);
+    };
+
+    self.getSpell = function(type, spellLevel) {
+      var spell = {};
+      if(spellLevel) {
+        if(_.includes(['Arcane', 'Divine'], type)) {
+          spell = self.grimoire.getSpell(spellLevel, {type: type});
+        }
+        else
+        {
+          spell = self.grimoire.getSpell(spellLevel);
+        }
+        self.itemLists.unshift(
+          {
+            date: new Date(),
+            spells: [spell]
+          }
+        );
+      }
+    };
+
+    self.getSpellbook = function(casterLevel) {
+      var book = self.grimoire.getSpellbook(casterLevel);
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        spellbook: book
+      });
+    };
+
+    self.getAlignment = function() {
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        other: [{text: self.grimoire.getAlignment() }]
+      });
+    };
+
+    self.getDeity = function() {
+      var deity = self.grimoire.getDeity();
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        other: [{text: deity.name + ' (' + deity.alignment + ')' }]
+      });
+    };
+
+    self.getHumanoidType = function() {
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        other: [{text: self.grimoire.getHumanoid() }]
+      });
+    };
+
+    self.getOutsiderType = function() {
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        other: [{text: self.grimoire.getOutsider() }]
+      });
+    };
+
+    self.getIntelligence = function(baseCost) {
+      var intel = self.grimoire.getIntelligence(baseCost);
+      self.itemLists.unshift(
+      {
+        date: new Date(),
+        other: [{text: intel.print() + '; Cost: ' + intel.cost }]
+      });
     };
 
   }//end of GrimoireController
