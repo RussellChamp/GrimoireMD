@@ -1,11 +1,11 @@
 {
   "name": "GrimoireJS",
   "homepage": "https://github.com/RussellChamp/GrimoireJS",
-  "_release": "9578cf1fc7",
+  "_release": "ad5c5d98b4",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "9578cf1fc7038d451496961fe84f1a7058a84fdd"
+    "commit": "ad5c5d98b4fe543d4cfc39deaa723f8ca41bf033"
   },
   "_source": "https://github.com/RussellChamp/GrimoireJS.git",
   "_target": "*",
