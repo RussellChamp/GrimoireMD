@@ -45,9 +45,10 @@
     self.doneLoading = false;
     self.selected = null;
 
-    grimoireService.createInstance().then(function(g) {
+    grimoireService.createInstance({baseDir: './data/', async: true}).then(function(g) {
       self.grimoire = g;
       self.doneLoading = true;
+      console.log('Done loading');
     });
 
     self.toggleSidebar = function() {

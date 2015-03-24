@@ -74,14 +74,17 @@ WEIGHTS[QUALITIES.MAJOR] = {
 //Contains all the source info
 var Grimoire = function(config) { // jshint ignore:line
     var self = this;
+    config = config || {};
     this.chance = (config && config.chance ? config.chance : config && config.seed ? new Chance(config.seed) : new Chance());
 
     this.SOURCES = [];
     $.ajaxSetup({
-        async: false //A project that works now is better than one that doesn't exist.
+        async: (config.async !== undefined) ? config.async : true
+                     //A project that works now is better than one that doesn't exist.
                      //I MUST come back and revisit this with promises later
     });
-    $.getJSON('./data/sources.json', function(sources) { 
+    var baseDir = config.baseDir ? config.baseDir : './sources/';
+    $.getJSON(baseDir + 'sources.json', function(sources) { 
         sources.sources.forEach(function(url) {
             $.getJSON(url, function(source) {
                     console.log('loaded '+ url);

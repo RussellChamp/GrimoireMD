@@ -2,7 +2,7 @@
 'use strict';
 
 describe('Sources', function() {
-    var grimoire = new Grimoire();
+    var grimoire = new Grimoire({async: false, baseDir: './sources/'});
     it('should load sources', function() {
         expect(grimoire.SOURCES).toBeTruthy();
     });
