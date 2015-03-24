@@ -1,7 +1,8 @@
 <md-dialog class="rollerDialog">
-
-<h2 class="md-primary">Number of items</h2>
-<md-list layout="row" layout-align="center center">
+<md-content>
+<h2 class="md-primary" layout="column" layout-align="center center">Number of items</h2>
+<md-list 
+    layout="row" layout-align="center center">
     <md-item>
     <md-input-container>
         <label>Minor</label>
@@ -22,38 +23,39 @@
     </md-item>
 </md-list>
 
-<md-divider></md-divider>
-
-<md-button class="md-primary" ng-click="config.closeDialog('roll')">Roll</md-button>
-<md-button class="md-primary" ng-click="config.closeDialog('close')">Close</md-button>
-
-<md-divider></md-divider>
-
-<md-content layout="column">
-<h2 class="md-primary">Item Types</h2>
-    <md-list>
+<h2 class="md-primary" layout="column" layout-align="center center">Item Types</h2>
+    <md-list layout="row" layout-wrap>
         <md-item ng-repeat="(name, status) in config.options.displayTypes"
-            layout="row" flex="33" ng-if="name != 'Spells'">
+            layout-sm="column" flex-sm="100"
+            layout-gt-sm="row" flex-gt-sm="40" ng-if="name != 'Spells'">
             <md-checkbox ng-model="config.options.displayTypes[name]"
-                ng-disabled="status == 'disabled'" aria-label={{name}}>
+                ng-disabled="status == 'disabled'" aria-label={{name}}
+                flex="50">
                 {{name}}
                 <md-tooltip ng-if="status == 'disabled'">
                     Disabled in all sources
                 </md-tooltip>
             </md-checkbox>
-            <!-- <md-button class="md-raised" flex="20" 
-                ng-disabled="status == 'disabled'" ng-click="gr.getItem('minor', name)">
-                Minor
-            </md-button>
-            <md-button class="md-raised" flex="20" 
-                ng-disabled="status == 'disabled'" ng-click="gr.getItem('medium', name)">
-                Medium
-            </md-button>
-            <md-button class="md-raised" flex="20" 
-                ng-disabled="status == 'disabled'" ng-click="gr.getItem('major', name)">
-                Major
-            </md-button> -->
+            <div flex>
+                <md-button class="md-raised" flex="20" 
+                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('minor', name)">
+                    Minor
+                </md-button>
+                <md-button class="md-raised" flex="20" 
+                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('medium', name)">
+                    Medium
+                </md-button>
+                <md-button class="md-raised" flex="20" 
+                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('major', name)">
+                    Major
+                </md-button>
+            </div>
         </md-item>
     </md-list>
-</md-content>    
+    <md-divider></md-divider>
+
+<md-button class="md-primary" ng-click="config.closeDialog('roll')">Roll</md-button>
+<md-button class="md-primary" ng-click="config.closeDialog('close')">Close</md-button>
+</md-content>
+
 </md-dialog>

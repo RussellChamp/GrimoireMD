@@ -156,15 +156,25 @@
         </md-sidenav>
 
         <md-content flex id="content" layout="column">
-          <md-button class="md-primary big" ng-click="gr.openConfig()">Generate Items</md-button>
+          <md-button id="generateButton" class="md-primary md-hue-2" ng-click="gr.openConfig()">
+            Generate Items
+          </md-button>
           <md-list>
             <md-item ng-repeat="itemList in gr.itemLists">
             <div class="md-whiteframe-z2">
               <h2 layout-align="center">~~{{itemList.date|date:'HH:mm:ss'}}~~</h2>
               <ul>
                 <li ng-repeat="item in itemList.items">
-                  <span ng-if="item.print">{{item.print()}} {{item.cost|number}}gp</span>
-                  <span ng-if="!item.print">{{item.name}} {{item.description}} {{item.cost|number}}gp</span>
+                  <span ng-if="item.print">
+                    {{item.print()}} {{item.cost|number}}gp
+                  </span>
+                  <span ng-if="!item.print">
+                    {{item.name}} {{item.description}} {{item.cost|number}}gp
+                  </span>
+                  <span ng-if="item.source"> ({{item.source}})</span>
+                  <a ng-if="item.name" ng-href="{{gr.baseUrl}}{{item.name}}" target="_blank">
+                    <md-icon md-svg-icon="launch">
+                  </a>
                 </li>
                 <li ng-repeat="spell in itemList.spells">
                   <span>{{spell.name}} ({{spell.type}} level {{spell.level}}, {{spell.source}})</span>

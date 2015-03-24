@@ -30,6 +30,7 @@
     self.grimoire = {};
 
     self.itemLists = [];
+    self.baseUrl = "http://www.google.com/cse?cx=006680642033474972217%3A6zo0hx_wle8&q=";
 
     self.options = {
       disableGlowing: false,
@@ -143,6 +144,10 @@
     };
 
     self.getItems = function() {
+      //if we are not rolling any items
+      if((self.options.numMinor || 0) + (self.options.numMedium || 0) + (self.options.numMajor || 0) == 0) {
+        return;
+      }
       //get all displayTypes that are 'true'
       self.options.types = _.invert(self.options.displayTypes, /*multiValue*/true).true;
       //console.log('Roll for items using config', self.options);

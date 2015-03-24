@@ -6,6 +6,11 @@ html, body {
   padding: 0px;
 }
 
+#generateButton {
+  font-size: large;
+  min-height: 3em;
+}
+
 /* Toolbar area */
 
 .menu {
