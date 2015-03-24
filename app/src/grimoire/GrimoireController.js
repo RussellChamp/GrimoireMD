@@ -5,11 +5,11 @@
   angular
        .module('grimoire')
        .controller('GrimoireController', [
-          'grimoireService', '$mdSidenav', '$mdBottomSheet', '$mdDialog', '$log', '$q',
+          'grimoireService', '$mdSidenav', '$mdBottomSheet', '$mdDialog', '$log', '$q', '$scope',
           GrimoireController
        ])
        .controller('SourcesController', ['$mdDialog', 'source', SourceEditor])
-       .controller('ConfigController', ['$mdDialog', 'sources', 'options', RollConfig]);
+       .controller('ConfigController', ['$mdDialog', 'sources', 'options', '$rootScope', RollConfig]);
 
   /**
    * Main Controller for the Angular Material Starter App
@@ -18,7 +18,7 @@
    * @param avatarsService
    * @constructor
    */
-  function GrimoireController( grimoireService, $mdSidenav, $mdBottomSheet, $mdDialog, $log, $q, $event) {
+  function GrimoireController( grimoireService, $mdSidenav, $mdBottomSheet, $mdDialog, $log, $q, $scope, $event) {
     var self = this;
 
     // self.selected     = null;
@@ -133,11 +133,10 @@
     };
 
     self.getItem = function(quality, itemType) {
-      console.log(quality, itemType);
       self.options.types = [itemType];
       var item = self.grimoire.getItems(quality, 1, self.options);
       var itemList = {
-        items: [item],
+        items: [].concat(item),
         date: new Date()
       };
       self.itemLists.unshift(itemList);
@@ -244,6 +243,10 @@
       });
     };
 
+    $scope.$on('rollItem', function(event, item) {
+      self.getItem(item.quality, item.type);
+    });
+
   }//end of GrimoireController
 
   function SourceEditor($mdDialog, source) {
@@ -255,7 +258,7 @@
     };
   }
 
-  function RollConfig($mdDialog, sources, options) {
+  function RollConfig($mdDialog, sources, options, $rootScope) {
     var self = this;
     //console.log('sources are', sources, 'and options', options);
     self.sources = sources;
@@ -287,6 +290,11 @@
     self.closeDialog = function(action) {
       $mdDialog.hide(action);
     };
+
+    self.getItem = function(quality, type) {
+      //use $rootScope until I can figure out how a parent/child emit would work
+      $rootScope.$broadcast('rollItem', {quality: quality, type: type});
+    }
   }
 
 })();

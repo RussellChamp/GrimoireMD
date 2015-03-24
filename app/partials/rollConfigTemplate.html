@@ -5,19 +5,19 @@
     layout="row" layout-align="center center">
     <md-item>
     <md-input-container>
-        <label>Minor</label>
+        <label>Get Minor</label>
         <input type="number" ng-model="config.options.numMinor" min=0 max=100 required>
     </md-input-container>
     </md-item>
     <md-item>
     <md-input-container>
-        <label>Medium</label>
+        <label>Get Medium</label>
         <input type="number" ng-model="config.options.numMedium" min=0 max=100 required>
     </md-input-container>
     </md-item>
     <md-item>
     <md-input-container>
-        <label>Major</label>
+        <label>Get Major</label>
         <input type="number" ng-model="config.options.numMajor" min=0 max=100 required>
     </md-input-container>
     </md-item>
@@ -38,15 +38,15 @@
             </md-checkbox>
             <div flex>
                 <md-button class="md-raised" flex="20" 
-                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('minor', name)">
+                    ng-disabled="status == 'disabled'" ng-click="config.getItem('minor', name)">
                     Minor
                 </md-button>
                 <md-button class="md-raised" flex="20" 
-                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('medium', name)">
+                    ng-disabled="status == 'disabled'" ng-click="config.getItem('medium', name)">
                     Medium
                 </md-button>
                 <md-button class="md-raised" flex="20" 
-                    ng-disabled="status == 'disabled'" ng-click="gr.getItem('major', name)">
+                    ng-disabled="status == 'disabled'" ng-click="config.getItem('major', name)">
                     Major
                 </md-button>
             </div>
