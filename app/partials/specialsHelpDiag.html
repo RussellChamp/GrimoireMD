@@ -1,0 +1,18 @@
+<md-dialog aria-label="Specials Help Dialog" class="help-menu" layout="column" layout-align="center center">
+     <md-content>
+          <div><h1>Rolling item specials</h1></div>
+          <div>
+               <h2>When rolling items</h2>
+               When a weapon, shield, or armor is rolled, there is a probability for <i>"get special powers and roll again"</i>. 
+               When <u><i>Recursive Specials</i></u> is enabled, another special could be rolled again during the <i>"and roll again"</i> part. 
+               Disabling this option will only allow one retrieval of specials per item.
+          </div>
+          <div>
+               <h2>When rolling specials</h2>
+               When rolling for a special power for a weapon, shield, or armor, there is a 1% chance to roll twice and return two specials. 
+               When <u><i>Recursive Specials</i></u> is enabled, there is a 1% chance for either of those specials to return another two specials. 
+               Disabling this option will allow a maximum of only two specials per <i>"get special powers"</i> request.
+          </div>
+          <div><md-button ng-click="hc.closeDialog()">Close</md-button></div>
+     </md-content>
+</md-dialog>

@@ -32,7 +32,8 @@
 <md-content layout="column">
 <h2 class="md-primary">Item Types</h2>
     <md-list>
-        <md-item ng-repeat="(name, status) in config.options.displayTypes" layout="row" flex="33">
+        <md-item ng-repeat="(name, status) in config.options.displayTypes"
+            layout="row" flex="33" ng-if="name != 'Spells'">
             <md-checkbox ng-model="config.options.displayTypes[name]"
                 ng-disabled="status == 'disabled'" aria-label={{name}}>
                 {{name}}

@@ -92,6 +92,44 @@
           }
         });
     };
+    self.showSpecialsHelp = function() {
+      function HelpController($mdDialog) {
+        this.closeDialog = function() {
+          $mdDialog.hide();
+        }
+      }
+      $mdDialog.show({
+        templateUrl: 'partials/specialsHelpDiag.html',
+          controller: HelpController,
+          controllerAs: 'hc'
+      });
+    };
+
+    self.showSpellbookHelp = function() {
+      function SpellbookController($mdDialog) {
+        this.closeDialog = function() {
+          $mdDialog.hide();
+        }
+      }
+      $mdDialog.show({
+        templateUrl: 'partials/spellbookHelpDiag.html',
+          controller: SpellbookController,
+          controllerAs: 'sc'
+      });
+    };
+
+    self.showIntelligenceHelp = function() {
+      function IntelController($mdDialog) {
+        this.closeDialog = function() {
+          $mdDialog.hide();
+        }
+      }
+      $mdDialog.show({
+        templateUrl: 'partials/intelligenceHelpDiag.html',
+          controller: IntelController,
+          controllerAs: 'ic'
+      });
+    };
 
     self.getItem = function(quality, itemType) {
       console.log(quality, itemType);

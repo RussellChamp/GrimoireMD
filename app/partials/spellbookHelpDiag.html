@@ -1,0 +1,21 @@
+<md-dialog aria-label="Spellbook Help" class="help-menu" layout="column" layout-align="center center">
+     <md-content>
+          <div><h1>Generating a Spellbook</h1></div>
+          <div>
+               <h2>Highest Spell Level</h2>
+               The highest spell level in the spellbook is the highest available to a Wizard with the given <i>Caster Level</i>
+          </div>
+          <div>
+          <h2>Number of Spells</h2>
+               A spellbook will always contain 10 cantrips. It is assumed that each time the spell caster qualifies for a new spell level, 
+               the two "free" spells gained from that level and the next level will allocated to that spell level. 
+               After that, it is assumed that the spell caster will slowly add additional spells to their spellbook as they progress in level.
+          </div>
+          <div>
+          <h2>Sources</h2>
+               Spells are pulled from sources that have their <i>Spells</i> checkbox marked under <u><i>Configure Sources</i></u>. 
+               <b>WARNING!</b> If you disable too many sources, the <u><i>Get Spellbook</i></u> function may fail and kill your session!
+          </div>
+          <div><md-button ng-click="sc.closeDialog()">Close</md-button></div>
+     </md-content>
+</md-dialog>

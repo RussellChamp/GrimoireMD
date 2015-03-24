@@ -64,13 +64,17 @@
                 <input type="number" ng-model="gr.options.clueChance" min=0 max=100>
               </md-input-container>
             </md-item>
-            <md-item>
+            <md-item layout="row">
               <md-switch ng-model="gr.options.disableRecursiveSpecials" 
                 ng-true-value="false" ng-false-value="true"
-                aria-label="Recursive Specials">
+                aria-label="Recursive Specials" flex="70">
                 Recursive Specials
                 <md-tooltip>Allow >1 specials per item</md-tooltip>
               </md-switch>
+              <md-button class="help" ng-click="gr.showSpecialsHelp()" aria-label="Show Specials Help"
+                flex>
+                <md-icon md-svg-icon="help" ></md-icon>
+              </md-button>
             </md-item>
             <md-item layout="row">
               <md-switch ng-model="gr.options.disableIntelligent" 
@@ -111,6 +115,9 @@
                 <label>Caster Level</label>
                 <input type="number" ng-model="casterLevel" min=1 max=20>
               </md-input-container>
+              <md-button class="help" ng-click="gr.showSpellbookHelp()" aria-label="Show Spellbook Help" flex="20">
+                <md-icon md-svg-icon="help" ></md-icon>
+              </md-button>
             </md-item>
             <md-item>
               <md-button ng-click="gr.getAlignment()">
@@ -134,12 +141,16 @@
             </md-item>
             <md-item layout="row">
               <md-button ng-click="gr.getIntelligence(baseCost)">
-                Get Item Intelligence
+                Get Item Intel.
+                <md-tooltip>Item Intelligence</md-tooltip>
               </md-button>
               <md-input-container>
                 <label>Base Cost</label>
                 <input type="number" ng-model="baseCost" min=0>
               </md-input-container>
+              <md-button class="help" ng-click="gr.showIntelligenceHelp()" aria-label="Show Intelligence Help" flex="20">
+                <md-icon md-svg-icon="help" ></md-icon>
+              </md-button>
             </md-item>
           </md-list>
         </md-sidenav>

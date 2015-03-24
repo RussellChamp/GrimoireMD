@@ -16,6 +16,10 @@ html, body {
   width: 36px;
 }
 
+.help-menu {
+  padding: 16px;
+}
+
 md-toolbar h1 {
   margin: auto;
 }
