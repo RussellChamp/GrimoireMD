@@ -1,0 +1,35 @@
+{
+        "uniqueArmors": [
+                {"name": "Mistmail", "cost": 2250, "weight": { "minor": 0, "medium": 20, "major": 2} },
+                {"name": "Soothsayer's raiment", "cost": 10300, "weight": { "minor": 0, "medium": 15, "major": 3} },
+                {"name": "Boneless leather", "cost": 12160, "weight": { "minor": 0, "medium": 15, "major": 1} },
+                {"name": "Murderer's blackcloth", "cost": 12405, "weight": { "minor": 0, "medium": 15, "major": 1} },
+                {"name": "Folding plate", "cost": 12650, "weight": { "minor": 0, "medium": 15, "major": 5} },
+                {"name": "Armor of insults", "cost": 16175, "weight": { "minor": 0, "medium": 10, "major": 15} },
+                {"name": "Buccaneer's breastplate", "cost": 23850, "weight": { "minor": 0, "medium": 0, "major": 15} },
+                {"name": "Forsaken banded mail", "cost": 25400, "weight": { "minor": 0, "medium": 0, "major": 7} },
+                {"name": "Giant-hide armor (ogre)", "cost": 39165, "weight": { "minor": 0, "medium": 0, "major": 12} },
+                {"name": "Giant-hide armor (hill giant)", "cost": 46665, "weight": { "minor": 0, "medium": 0, "major": 10} },
+                {"name": "Giant-hide armor (stone giant)", "cost": 54165, "weight": { "minor": 0, "medium": 0, "major": 10} },
+                {"name": "Giant-hide armor (fire giant)", "cost": 54165, "weight": { "minor": 0, "medium": 0, "major": 5} },
+                {"name": "Giant-hide armor (frost giant)", "cost": 54165, "weight": { "minor": 0, "medium": 0, "major": 5} },
+                {"name": "Giant-hide armor (troll)", "cost": 59165, "weight": { "minor": 0, "medium": 0, "major": 5} },
+                {"name": "Giant-hide armor (cloud giant)", "cost": 69165, "weight": { "minor": 0, "medium": 0, "major": 1} },
+                {"name": "Giant-hide armor (storm giant)", "cost": 76665, "weight": { "minor": 0, "medium": 0, "major": 1} },
+                {"name": "Daystar half-plate", "cost": 81250, "weight": { "minor": 0, "medium": 0, "major": 2} }
+        ],
+        "armorSpecials": [
+                {"name": "Champion", "bonus": 1, "cost": 0, "weight": {"minor": 0, "medium": 0, "major": 0} },
+                {"name": "Dastard", "bonus": 1, "cost": 0, "weight": {"minor": 0, "medium": 0, "major": 0} },
+                {"name": "Jousting", "bonus": 0, "cost": 3750, "weight": {"minor": 0, "medium": 0, "major": 0} },
+                {"name": "Righteous", "bonus": 0, "cost": 27000, "weight": {"minor": 0, "medium": 0, "major": 0} },
+                {"name": "Unrighteous", "bonus": 0, "cost": 27000, "weight": {"minor": 0, "medium": 0, "major": 0} },
+                {"name": "Determination", "bonus": 0, "cost": 30000, "weight": {"minor": 0, "medium": 0, "major": 0} }
+        ],
+        "uniqueShields": [
+                {"name": "Battlement shield", "cost": 16180, "weight": { "minor": 0, "medium": 0, "major": 50} },
+                {"name": "Fortress shield", "cost": 19180, "weight": { "minor": 0, "medium": 0, "major": 50} }
+        ],
+        "shieldSpecials": [
+        ]
+}

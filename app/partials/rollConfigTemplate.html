@@ -38,7 +38,8 @@
             </md-checkbox>
             <div flex>
                 <md-button class="md-raised" flex="20" 
-                    ng-disabled="status == 'disabled'" ng-click="config.getItem('minor', name)">
+                    ng-disabled="status == 'disabled' || name == 'Rods' || name == 'Staves'" 
+                    ng-click="config.getItem('minor', name)">
                     Minor
                 </md-button>
                 <md-button class="md-raised" flex="20" 

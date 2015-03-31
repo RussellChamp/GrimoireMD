@@ -1,0 +1,19 @@
+[
+    {"name": "Staff of Toxins", "cost": 12600, "weight": { "medium": 2, "major": 1} },
+    {"name": "Staff of Journeys", "cost": 13600, "weight": { "medium": 3, "major": 1} },
+    {"name": "Staff of Rigor", "cost": 13600, "weight": { "medium": 5, "major": 2} },
+    {"name": "Staff of Shrieking", "cost": 14400, "weight": { "medium": 8, "major": 4} },
+    {"name": "Staff of Souls", "cost": 16400, "weight": { "medium": 7, "major": 3} },
+    {"name": "Staff of Stealth", "cost": 18400, "weight": { "medium": 10, "major": 5} },
+    {"name": "Staff of Revalations", "cost": 20400, "weight": { "medium": 7, "major": 4} },
+    {"name": "Staff of Bolstering", "cost": 20800, "weight": { "medium": 12, "major": 6} },
+    {"name": "Staff of Traps", "cost": 21200, "weight": { "medium": 5, "major": 2} },
+    {"name": "Staff of Cackling Wrath", "cost": 23600, "weight": { "medium": 10, "major": 7} },
+    {"name": "Staff of Obstacles", "cost": 25800, "weight": { "medium": 7, "major": 9} },
+    {"name": "Staff of Performance", "cost": 26800, "weight": { "medium": 6, "major": 10} },
+    {"name": "Staff of Hoarding", "cost": 30016, "weight": { "medium": 4, "major": 4} },
+    {"name": "Staff of Slumber", "cost": 34050, "weight": { "medium": 6, "major": 12} },
+    {"name": "Staff of Vision", "cost": 41250, "weight": { "medium": 3, "major": 11} },
+    {"name": "Staff of Weather", "cost": 44200, "weight": { "medium": 3, "major": 8} },
+    {"name": "Staff of Many Rays", "cost": 52800, "weight": { "medium": 2, "major": 9} }
+]

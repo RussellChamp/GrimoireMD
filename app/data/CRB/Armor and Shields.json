@@ -1,17 +1,17 @@
 {
         "uniqueArmors": [
-                {"name": "Mithral shirt", "cost": 1100, "url": "#mithril-shirt", "weight": { "minor": 50, "medium": 25, "major": 0} },
-                {"name": "Dragonhide plate", "cost": 3300, "url":"", "weight": { "minor": 30, "medium": 20, "major": 0} },
-                {"name": "Elven chain", "cost": 5150, "url":"", "weight": { "minor": 20, "medium": 12, "major": 0} },
-                {"name": "Rhino hide", "cost": 5165, "url":"", "weight": { "minor": 0, "medium": 10, "major": 0} },
-                {"name": "Adamantine breastplate", "cost": 10200, "url":"", "weight": { "minor": 0, "medium": 15, "major": 10} },
-                {"name": "Dwarven plate", "cost": 16500, "url":"", "weight": { "minor": 0, "medium": 15, "major": 10} },
-                {"name": "Banded mail of luck", "cost": 18900, "url":"", "weight": { "minor": 0, "medium": 3, "major": 12} },
-                {"name": "Celestial armor", "cost": 22400, "url":"", "weight": { "minor": 0, "medium": 0, "major": 18} },
-                {"name": "Plate armor of the deep", "cost": 24650, "url":"", "weight": { "minor": 0, "medium": 0, "major": 10} },
-                {"name": "Breastplate of command", "cost": 25400, "url":"", "weight": { "minor": 0, "medium": 0, "major": 15} },
-                {"name": "Mithral full plate of speed", "cost": 26500, "url":"", "weight": { "minor": 0, "medium": 0, "major": 15} },
-                {"name": "Demon armor", "cost": 52260, "url":"", "weight": { "minor": 0, "medium": 0, "major": 10} }
+                {"name": "Mithral shirt", "cost": 1100, "weight": { "minor": 50, "medium": 25, "major": 0} },
+                {"name": "Dragonhide plate", "cost": 3300, "weight": { "minor": 30, "medium": 20, "major": 0} },
+                {"name": "Elven chain", "cost": 5150, "weight": { "minor": 20, "medium": 12, "major": 0} },
+                {"name": "Rhino hide", "cost": 5165, "weight": { "minor": 0, "medium": 10, "major": 0} },
+                {"name": "Adamantine breastplate", "cost": 10200, "weight": { "minor": 0, "medium": 15, "major": 10} },
+                {"name": "Dwarven plate", "cost": 16500, "weight": { "minor": 0, "medium": 15, "major": 10} },
+                {"name": "Banded mail of luck", "cost": 18900, "weight": { "minor": 0, "medium": 3, "major": 12} },
+                {"name": "Celestial armor", "cost": 22400, "weight": { "minor": 0, "medium": 0, "major": 18} },
+                {"name": "Plate armor of the deep", "cost": 24650, "weight": { "minor": 0, "medium": 0, "major": 10} },
+                {"name": "Breastplate of command", "cost": 25400, "weight": { "minor": 0, "medium": 0, "major": 15} },
+                {"name": "Mithral full plate of speed", "cost": 26500, "weight": { "minor": 0, "medium": 0, "major": 15} },
+                {"name": "Demon armor", "cost": 52260, "weight": { "minor": 0, "medium": 0, "major": 10} }
         ],
         "armorSpecials": [
                 {"name": "Glamered", "bonus": 0, "cost": 2700, "weight": {"minor": 25, "medium": 5, "major": 3} },
@@ -38,14 +38,14 @@
                 {"name": "Energy resistance, greater (GET_ENERGY_RESISTANCE_TYPE)", "bonus": 0, "cost": 66000, "weight": {"minor": 0, "medium": 0, "major": 5} }
         ],
         "uniqueShields": [
-                {"name": "Darkwood buckler", "cost": 203, "url": "#darkwood-buckler", "weight": { "minor": 30, "medium": 20, "major": 0} },
-                {"name": "Darkwood shield", "cost": 257, "url": "", "weight": { "minor": 50, "medium": 25, "major": 0} },
-                {"name": "Mithral heavy shield", "cost": 1020, "url": "", "weight": { "minor": 15, "medium": 25, "major": 0} },
-                {"name": "Caster's shield", "cost": 3153, "url": "", "weight": { "minor": 5, "medium": 15, "major": 20} },
-                {"name": "Spined shield", "cost": 5580, "url": "", "weight": { "minor": 0, "medium": 5, "major": 20} },
-                {"name": "Lion's shield", "cost": 9170, "url": "", "weight": { "minor": 0, "medium": 5, "major": 22} },
-                {"name": "Winged shield", "cost": 17257, "url": "", "weight": { "minor": 0, "medium": 5, "major": 28} },
-                {"name": "Absorbing shield", "cost": 5017, "url": "", "weight": { "minor": 0, "medium": 0, "major": 10} }
+                {"name": "Darkwood buckler", "cost": 203, "weight": { "minor": 30, "medium": 20, "major": 0} },
+                {"name": "Darkwood shield", "cost": 257, "weight": { "minor": 50, "medium": 25, "major": 0} },
+                {"name": "Mithral heavy shield", "cost": 1020, "weight": { "minor": 15, "medium": 25, "major": 0} },
+                {"name": "Caster's shield", "cost": 3153, "weight": { "minor": 5, "medium": 15, "major": 20} },
+                {"name": "Spined shield", "cost": 5580, "weight": { "minor": 0, "medium": 5, "major": 20} },
+                {"name": "Lion's shield", "cost": 9170, "weight": { "minor": 0, "medium": 5, "major": 22} },
+                {"name": "Winged shield", "cost": 17257, "weight": { "minor": 0, "medium": 5, "major": 28} },
+                {"name": "Absorbing shield", "cost": 5017, "weight": { "minor": 0, "medium": 0, "major": 10} }
         ],
         "shieldSpecials": [
                 {"name": "Arrow catching", "bonus": 1, "cost": 0, "weight": {"minor": 20, "medium": 10, "major": 5} },

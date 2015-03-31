@@ -1,0 +1,42 @@
+{
+    "uniqueWeapons": [
+        {"name": "Dustburst bullet", "cost": 196, "weight": {"minor": 35, "medium": 0, "major": 0} },
+        {"name": "Tangle bolt", "cost": 226, "weight": {"minor": 35, "medium": 0, "major": 0} },
+        {"name": "Searing arrow", "cost": 1516, "weight": {"minor": 10, "medium": 7, "major": 0} },
+        {"name": "Sizzling arrow", "cost": 1516, "weight": {"minor": 10, "medium": 7, "major": 0} },
+        {"name": "Lance of jousting", "cost": 4310, "weight": {"minor": 10, "medium": 12, "major": 0} },
+        {"name": "Boulderhead mace", "cost": 6812, "weight": {"minor": 0, "medium": 15, "major": 0} },
+        {"name": "Beaststrike club", "cost": 7300, "weight": {"minor": 0, "medium": 12, "major": 0} },
+        {"name": "Trident of stability", "cost": 9815, "weight": {"minor": 0, "medium": 7, "major": 4} },
+        {"name": "Blade of binding", "cost": 12350, "weight": {"minor": 0, "medium": 10, "major": 16} },
+        {"name": "Shieldsplitter lance", "cost": 18310, "weight": {"minor": 0, "medium": 9, "major": 16} },
+        {"name": "Ricochet hammer", "cost": 20301, "weight": {"minor": 0, "medium": 8, "major": 27} },
+        {"name": "Sparkwake starknife", "cost": 21324, "weight": {"minor": 0, "medium": 8, "major": 20} },
+        {"name": "Undercutting axe", "cost": 23310, "weight": {"minor": 0, "medium": 5, "major": 6} },
+        {"name": "Spirit blade", "cost": 48502, "weight": {"minor": 0, "medium": 0, "major": 6} },
+        {"name": "Guarding blade", "cost": 65310, "weight": {"minor": 0, "medium": 0, "major": 6} }
+        ],
+    "meleeSpecials" : [
+        {"name": "Allying", "bonus": 1, "weight": {"minor": 12, "medium": 4, "major": 3} },
+        {"name": "Conductive", "bonus": 1, "weight": {"minor": 12, "medium": 8, "major": 5} },
+        {"name": "Corrosive", "bonus": 1, "weight": {"minor": 12, "medium": 10, "major": 11} },
+        {"name": "Cunning", "bonus": 1, "weight": {"minor": 12, "medium": 10, "major": 9} },
+        {"name": "Furious", "bonus": 1, "weight": {"minor": 10, "medium": 8, "major": 9} },
+        {"name": "Grayflame", "bonus": 1, "weight": {"minor": 12, "medium": 9, "major": 9} },
+        {"name": "Huntsman", "bonus": 1, "weight": {"minor": 7, "medium": 9, "major": 9} },
+        {"name": "Jurist", "bonus": 1, "weight": {"minor": 7, "medium": 9, "major": 9} },
+        {"name": "Menacing", "bonus": 1, "weight": {"minor": 15, "medium": 9, "major": 9} },
+        {"name": "Corrosive burst", "bonus": 2, "weight": {"minor": 0, "medium": 8, "major": 7} },
+        {"name": "Dueling", "bonus": 0, "cost": 14000, "weight": {"minor": 0, "medium": 7, "major": 4} },
+        {"name": "Transformative", "bonus": 0, "cost": 10000, "weight": {"minor": 0, "medium": 6, "major": 5} }        
+    ],
+    "rangedSpecials" : [
+        {"name": "Allying", "bonus": 1, "weight": {"minor": 15, "medium": 14, "major": 13} },
+        {"name": "Conductive", "bonus": 1, "weight": {"minor": 15, "medium": 14, "major": 13} },
+        {"name": "Corrosive", "bonus": 1, "weight": {"minor": 18, "medium": 20, "major": 16} },
+        {"name": "Cunning", "bonus": 1, "weight": {"minor": 12, "medium": 10, "major": 14} },
+        {"name": "Huntsman", "bonus": 1, "weight": {"minor": 12, "medium": 11, "major": 9} },
+        {"name": "Jurist", "bonus": 1, "weight": {"minor": 22, "medium": 22, "major": 22} },
+        {"name": "Corrosive burst", "bonus": 2, "weight": {"minor": 5, "medium": 4, "major": 3} }
+    ]
+}
